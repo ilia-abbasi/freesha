@@ -18,6 +18,7 @@ import {
   DbResponse,
   DbResult,
   EducationDegree,
+  JobPost,
   None,
   PreRegisterInfo,
   Transaction,
@@ -357,3 +358,5 @@ async function insertWorkExperiences(
 
   await tx.insert(userWorkExperiencesTable).values(workExperiences);
 }
+
+export async function insertJobPost(jobPost: JobPost);

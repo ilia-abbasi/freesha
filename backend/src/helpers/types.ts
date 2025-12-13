@@ -4,6 +4,7 @@ import { PgTransaction } from "drizzle-orm/pg-core";
 import { QueryResult } from "pg";
 
 import {
+  jobPostsTable,
   userEducationDegreesTable,
   userWorkExperiencesTable,
 } from "../database/schema.js";
@@ -70,6 +71,7 @@ export type WorkExperience = Optional<
   typeof userWorkExperiencesTable.$inferSelect,
   "userId"
 >;
+export type JobPost = Partial<typeof jobPostsTable.$inferSelect>;
 export type Transaction = PgTransaction<
   NodePgQueryResultHKT,
   Record<string, never>,
