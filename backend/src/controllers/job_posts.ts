@@ -5,6 +5,7 @@ import * as db from "../database/db.js";
 import { makeResObj } from "../helpers/utils.js";
 import { JobPost } from "../helpers/types.js";
 import { JobPostStatusIds } from "../helpers/enums.js";
+import { messages } from "../helpers/messages.js";
 
 export async function createJobPost(
   req: Request,
@@ -33,4 +34,10 @@ export async function createJobPost(
   if (dbResponse.error || !dbResponse.result) {
     return next(dbResponse.error);
   }
+
+  const resObj = makeResObj(messages.createdJobPost, {
+    ...jobPost,
+    ...dbResponse.result,
+  });
+  return res.status(201).json(resObj);
 }

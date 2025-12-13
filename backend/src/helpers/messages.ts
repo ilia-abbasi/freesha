@@ -14,4 +14,5 @@ export const messages = {
   emptyReqBody: "ریکوئست بادی نباید خالی باشد",
   updatedUser: "اطلاعات کاربر با موفقیت بروزرسانی شد",
   gotUser: "اطلاعات کاربر با موفقیت دریافت شد",
+  createdJobPost: "آگهی کار با موفقیت ایجاد شد",
 };
