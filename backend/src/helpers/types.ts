@@ -71,7 +71,10 @@ export type WorkExperience = Optional<
   typeof userWorkExperiencesTable.$inferSelect,
   "userId"
 >;
-export type JobPost = Partial<typeof jobPostsTable.$inferSelect>;
+export type JobPost = Optional<
+  typeof jobPostsTable.$inferSelect,
+  "id" | "createdAt" | "updatedAt"
+>;
 export type Transaction = PgTransaction<
   NodePgQueryResultHKT,
   Record<string, never>,
