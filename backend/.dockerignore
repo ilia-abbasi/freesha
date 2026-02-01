@@ -8,3 +8,4 @@ commit
 package-lock.json
 *.tsbuildinfo
 *.env
+misc/build-push.bash

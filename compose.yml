@@ -12,7 +12,7 @@ services:
       - redis
     volumes:
       - drizzle_vol:/backend/drizzle
-    command: sh -c "npm run generate && npm run migrate && npm run dev"
+    command: sh -c "./misc/migration.bash && npm run dev"
   
   postgres:
     image: postgres:16.11-alpine
