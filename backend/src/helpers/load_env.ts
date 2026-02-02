@@ -1,6 +1,6 @@
 import dotenv from "dotenv";
 
-import { dockerizeDatabaseUrl } from "./utils";
+import { dockerizeDatabaseUrl } from "./utils.js";
 
 dotenv.config({ path: "./.env" });
 

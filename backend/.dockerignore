@@ -1,11 +1,12 @@
 dist/
 drizzle/
 node_modules/
-__tests__/
-*.md
-add
-commit
+src/__tests__/
 package-lock.json
+*.md
+**/*.md
 *.tsbuildinfo
+**/*.tsbuildinfo
 *.env
+**/*.env
 misc/build-push.bash
